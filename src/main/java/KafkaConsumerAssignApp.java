@@ -12,7 +12,7 @@ public class KafkaConsumerAssignApp {
 
         // create properties dictionary for the required/optional Consumer config settings:
         Properties properties = new Properties();
-        properties.put("bootstrap.servers", "localhost:9092, localhost:9093, localhost:9094");
+        properties.put("bootstrap.servers", "localhost:9092, localhost:9093");
         properties.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         properties.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         properties.put("group.id", "test");
@@ -21,7 +21,7 @@ public class KafkaConsumerAssignApp {
 
         ArrayList<TopicPartition> partitions = new ArrayList<>();
         TopicPartition myTopicPartition0 = new TopicPartition("my-topic", 0);
-        TopicPartition myOtherTopicPartition2 = new TopicPartition("myother--topic", 2);
+        TopicPartition myOtherTopicPartition2 = new TopicPartition("my-other-topic", 2);
         partitions.add(myTopicPartition0);
         partitions.add(myOtherTopicPartition2);
 
